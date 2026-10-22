@@ -1,0 +1,258 @@
+/*==================================================
+  MEDIA
+==================================================*/
+
+/*--------------------------------------
+  Base Media
+--------------------------------------*/
+
+.media {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.media-cover {
+  object-fit: cover;
+}
+
+.media-contain {
+  object-fit: contain;
+}
+
+/*--------------------------------------
+  Artwork
+--------------------------------------*/
+
+.artwork {
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  background: var(--color-surface);
+}
+
+.artwork img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.artwork:hover img {
+  transform: scale(1.04);
+}
+
+/*--------------------------------------
+  Artwork Sizes
+--------------------------------------*/
+
+.artwork-xs {
+  width: 40px;
+  height: 40px;
+}
+
+.artwork-sm {
+  width: 64px;
+  height: 64px;
+}
+
+.artwork-md {
+  width: 96px;
+  height: 96px;
+}
+
+.artwork-lg {
+  width: 140px;
+  height: 140px;
+}
+
+.artwork-xl {
+  width: 220px;
+  height: 220px;
+}
+
+/*--------------------------------------
+  Hero Artwork
+--------------------------------------*/
+
+.artwork-hero {
+  width: 320px;
+  aspect-ratio: 1;
+}
+
+/*--------------------------------------
+  Album Covers
+--------------------------------------*/
+
+.album-cover {
+  aspect-ratio: 1;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+/*--------------------------------------
+  Podcast Artwork
+--------------------------------------*/
+
+.podcast-cover {
+  aspect-ratio: 1;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+/*--------------------------------------
+  Artist Image
+--------------------------------------*/
+
+.artist-image {
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.artist-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*--------------------------------------
+  Avatar
+--------------------------------------*/
+
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-radius: 50%;
+
+  background: var(--color-surface);
+
+  flex-shrink: 0;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.avatar-xs {
+  width: 28px;
+  height: 28px;
+}
+
+.avatar-sm {
+  width: 36px;
+  height: 36px;
+}
+
+.avatar-md {
+  width: 48px;
+  height: 48px;
+}
+
+.avatar-lg {
+  width: 64px;
+  height: 64px;
+}
+
+.avatar-xl {
+  width: 96px;
+  height: 96px;
+}
+
+/*--------------------------------------
+  Logo
+--------------------------------------*/
+
+.logo {
+  display: block;
+}
+
+.logo img {
+  display: block;
+  width: auto;
+  height: 100%;
+}
+
+.logo-sm {
+  height: 28px;
+}
+
+.logo-md {
+  height: 40px;
+}
+
+.logo-lg {
+  height: 56px;
+}
+
+/*--------------------------------------
+  Banner
+--------------------------------------*/
+
+.banner {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/*--------------------------------------
+  Thumbnail
+--------------------------------------*/
+
+.thumbnail {
+  overflow: hidden;
+
+  border-radius: var(--radius-md);
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/*--------------------------------------
+  Hover
+--------------------------------------*/
+
+.media-hover img {
+  transition: transform 0.35s ease;
+}
+
+.media-hover:hover img {
+  transform: scale(1.05);
+}
+
+/*--------------------------------------
+  Placeholder
+--------------------------------------*/
+
+.media-placeholder {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: var(--color-surface);
+
+  color: var(--color-text-muted);
+}

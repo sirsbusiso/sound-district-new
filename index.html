@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Sound District | We Are The Music!</title>
+
+    <meta
+      name="description"
+      content="Discover podcasts, exclusive DJ mixes, music releases and merchandise on Sound District."
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/images/favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="/css/core/reset.css" />
+    <link rel="stylesheet" href="/css/core/variables.css" />
+    <link rel="stylesheet" href="/css/core/theme.css" />
+    <link rel="stylesheet" href="/css/core/typography.css" />
+    <link rel="stylesheet" href="/css/core/grid.css" />
+    <link rel="stylesheet" href="/css/core/utilities.css" />
+    <link rel="stylesheet" href="/css/core/global.css" />
+
+    <!-- Components -->
+    <link rel="stylesheet" href="/css/core/buttons.css" />
+    <link rel="stylesheet" href="/css/core/forms.css" />
+    <link rel="stylesheet" href="/css/core/cards.css" />
+    <link rel="stylesheet" href="/css/core/media.css" />
+    <link rel="stylesheet" href="/css/pages/home.css" />
+    <link rel="stylesheet" href="/css/layout/platforms.css" />
+
+    <!-- Layout -->
+    <link rel="stylesheet" href="/css/layout/navbar.css" />
+    <link rel="stylesheet" href="/css/layout/footer.css" />
+
+    <!-- Sections -->
+    <link rel="stylesheet" href="/css/layout/hero.css" />
+    <link rel="stylesheet" href="/css/sections/latest-episode.css" />
+    <link rel="stylesheet" href="/css/sections/featured-podcasts.css" />
+    <link rel="stylesheet" href="/css/sections/featured-music.css" />
+    <link rel="stylesheet" href="/css/sections/featured-shop.css" />
+    <link rel="stylesheet" href="/css/sections/newsletter.css" />
+    <link rel="stylesheet" href="/css/sections/cta.css" />
+    <link rel="stylesheet" href="/css/player/desktop-player.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+    <div id="podcastPlayer" class="sd-player">
+      <audio id="audioPlayer" preload="metadata"></audio>
+
+      <div class="sd-player-artwork">
+        <img
+          id="playerArtwork"
+          src="assets/images/cover-test.jpg"
+          alt="Podcast Artwork"
+        />
+      </div>
+
+      <div class="sd-player-info">
+        <span class="sd-player-now-playing">NOW PLAYING</span>
+
+        <h4 id="playerEpisodeTitle" class="sd-player-title">Loading...</h4>
+
+        <p id="playerEpisodeMeta" class="sd-player-meta">Loading...</p>
+      </div>
+
+      <div class="sd-player-controls">
+        <button id="previousButton" class="sd-player-button">
+          <i data-lucide="skip-back"></i>
+        </button>
+
+        <button
+          id="playPauseButton"
+          class="sd-player-button sd-player-button--play"
+        >
+          <i id="playPauseIcon" data-lucide="play"></i>
+        </button>
+
+        <button id="nextButton" class="sd-player-button">
+          <i data-lucide="skip-forward"></i>
+        </button>
+      </div>
+
+      <div class="sd-player-progress">
+        <span id="currentTime" class="sd-player-progress-time"> 00:00 </span>
+
+        <input
+          id="progressBar"
+          class="sd-player-progress-bar"
+          type="range"
+          min="0"
+          max="0"
+          step="0.1"
+          value="0"
+        />
+
+        <span id="duration" class="sd-player-progress-time"> 00:00 </span>
+      </div>
+
+      <div class="sd-player-right">
+        <button id="downloadButton" class="sd-player-icon-button">
+          <i data-lucide="download"></i>
+        </button>
+
+        <button id="shareButton" class="sd-player-icon-button">
+          <i data-lucide="share-2"></i>
+        </button>
+
+        <button id="muteButton" class="sd-player-icon-button">
+          <i data-lucide="volume-2"></i>
+        </button>
+
+        <input
+          id="volumeSlider"
+          class="sd-player-volume"
+          type="range"
+          min="0"
+          max="100"
+          value="100"
+        />
+      </div>
+    </div>
+
+    <section class="hero">
+      <!-- Decorative Background -->
+      <div class="hero-background">
+        <div class="hero-blob hero-blob-1"></div>
+
+        <div class="hero-blob hero-blob-2"></div>
+
+        <div class="hero-grid-lines"></div>
+      </div>
+
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <span class="hero-badge">
+              <i data-lucide="radio"></i>
+
+              New Episode Available
+            </span>
+
+            <h1 class="hero-title">
+              The Home of
+              <span class="typing-text">
+                <span class="typing-word">House Music</span>
+              </span>
+            </h1>
+            <p class="hero-description">
+              Stream exclusive podcasts, underground DJ mixes, curated playlists
+              and independent music releases from South Africa's growing
+              electronic music community.
+            </p>
+
+            <div class="hero-actions">
+              <a href="/podcasts/" class="btn btn-primary btn-lg">
+                <i data-lucide="play"></i>
+
+                Start Listening
+              </a>
+
+              <a href="/music/" class="btn btn-secondary btn-lg">
+                Browse Music
+              </a>
+            </div>
+
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <h3 id="episodesCount">0</h3>
+                <span>Episodes</span>
+              </div>
+
+              <div class="hero-stat">
+                <h3 id="artistsCount">0</h3>
+                <span>Guest DJs</span>
+              </div>
+
+              <div class="hero-stat">
+                <h3>24/7</h3>
+
+                <span>Streaming</span>
+              </div>
+            </div>
+          </div>
+
+          <!--==================================
+      RIGHT
+      ===================================-->
+
+          <div class="hero-media">
+            <!-- Featured Artwork -->
+            <a id="heroArtworkLink" href="#" class="hero-artwork">
+              <img id="heroArtworkImage" src="" alt="" />
+
+              <div class="hero-artwork-overlay"></div>
+
+              <button
+                id="heroPlayButton"
+                class="hero-play-button"
+                aria-label="Play Episode"
+              >
+                <i data-lucide="play"></i>
+              </button>
+            </a>
+
+            <!-- Floating Now Playing -->
+
+            <div class="hero-player-card">
+              <div class="player-cover">
+                <img id="playerCover" src="" alt="" />
+              </div>
+
+              <div class="player-details">
+                <span class="player-label"> LATEST EPISODE </span>
+
+                <h3 id="playerTitle">Loading...</h3>
+
+                <p id="playerMeta">Loading...</p>
+
+                <div class="player-progress">
+                  <span></span>
+                </div>
+
+                <div class="player-bottom">
+                  <div class="player-waveform">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+
+                  <button id="playerMiniPlay" class="player-mini-play">
+                    <i data-lucide="play"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Featured Badge -->
+            <div class="hero-featured-card">
+              <div class="featured-icon">
+                <i data-lucide="headphones"></i>
+              </div>
+
+              <span class="featured-label"> FEATURED EPISODE </span>
+
+              <h4 id="featuredTitle">Loading...</h4>
+
+              <p id="featuredMeta">Loading...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+
+      <div class="hero-scroll">
+        <span> Scroll </span>
+
+        <i data-lucide="mouse"></i>
+      </div>
+    </section>
+    <main class="home">
+      <section id="hero"></section>
+
+      <section class="platforms">
+        <div class="container">
+          <div class="platforms-header">
+            <span class="section-tag"> AVAILABLE EVERYWHERE </span>
+
+            <h2>Listen On Your Favourite Platform</h2>
+          </div>
+
+          <div class="platforms-slider">
+            <a href="#" class="platform-card">
+              <img src="assets/icons/applepodcasts.svg" alt="Apple Podcasts" />
+            </a>
+
+            <a href="#" class="platform-card">
+              <img src="assets/icons/youtube.svg" alt="YouTube" />
+            </a>
+
+            <a href="#" class="platform-card">
+              <img src="assets/icons/rss.svg" alt="RSS Feed" />
+            </a>
+
+            <a href="#" class="platform-card">
+              <img src="assets/icons/pocketcasts.svg" alt="Pocket Casts" />
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="latest-releases">
+        <div class="container">
+          <div class="latest-header">
+            <div>
+              <span class="section-tag">LATEST EPISODES</span>
+
+              <h2>Latest Releases</h2>
+
+              <p>
+                Discover the newest deep house, soulful house and Afro-house
+                mixes from Sound District Music Show.
+              </p>
+            </div>
+
+            <a href="/podcasts/" class="btn btn-outline"> View All Episodes </a>
+          </div>
+
+          <div class="latest-grid">
+            <!-- CARD 1 -->
+
+            <a
+              href="/podcasts/sound-district-music-show-126/"
+              class="latest-card"
+            >
+              <div class="latest-image">
+                <img
+                  src="assets/images/cover-test.jpg"
+                  alt="Sound District Music Show #126"
+                />
+
+                <div class="latest-overlay">
+                  <button class="latest-play">
+                    <i data-lucide="play"></i>
+                  </button>
+                </div>
+
+                <span class="latest-badge">NEW</span>
+
+                <div class="latest-duration">
+                  <i data-lucide="clock-3"></i>
+                  <span>01:18:00</span>
+                </div>
+              </div>
+
+              <div class="latest-content">
+                <div class="latest-top">
+                  <span class="latest-author">
+                    <i data-lucide="disc-3"></i>
+                    Sound District
+                  </span>
+
+                  <span class="latest-number">#126</span>
+                </div>
+
+                <h3>Sound District Music Show #126</h3>
+
+                <div class="latest-tags">
+                  <span>Deep House</span>
+                  <span>Afro House</span>
+                </div>
+
+                <div class="latest-footer">
+                  <span>
+                    <i data-lucide="calendar-days"></i>
+                    Jul 2026
+                  </span>
+
+                  <span>
+                    <i data-lucide="headphones"></i>
+                    Mix
+                  </span>
+                </div>
+              </div>
+            </a>
+
+            <!-- CARD 2 -->
+
+            <a
+              href="/podcasts/sound-district-music-show-125/"
+              class="latest-card"
+            >
+              <div class="latest-image">
+                <img
+                  src="assets/images/cover-test.jpg"
+                  alt="Sound District Music Show #125"
+                />
+
+                <div class="latest-overlay">
+                  <button class="latest-play">
+                    <i data-lucide="play"></i>
+                  </button>
+                </div>
+
+                <span class="latest-badge">NEW</span>
+
+                <div class="latest-duration">
+                  <i data-lucide="clock-3"></i>
+                  <span>01:11:34</span>
+                </div>
+              </div>
+
+              <div class="latest-content">
+                <div class="latest-top">
+                  <span class="latest-author">
+                    <i data-lucide="disc-3"></i>
+                    Sound District
+                  </span>
+
+                  <span class="latest-number">#125</span>
+                </div>
+
+                <h3>Soulful House Sessions #125</h3>
+
+                <div class="latest-tags">
+                  <span>Soulful</span>
+                  <span>House</span>
+                </div>
+
+                <div class="latest-footer">
+                  <span>
+                    <i data-lucide="calendar-days"></i>
+                    Jul 2026
+                  </span>
+
+                  <span>
+                    <i data-lucide="headphones"></i>
+                    Mix
+                  </span>
+                </div>
+              </div>
+            </a>
+
+            <!-- CARD 3 -->
+
+            <a
+              href="/podcasts/sound-district-music-show-124/"
+              class="latest-card"
+            >
+              <div class="latest-image">
+                <img
+                  src="assets/images/cover-test.jpg"
+                  alt="Sound District Music Show #124"
+                />
+
+                <div class="latest-overlay">
+                  <button class="latest-play">
+                    <i data-lucide="play"></i>
+                  </button>
+                </div>
+
+                <span class="latest-badge">NEW</span>
+
+                <div class="latest-duration">
+                  <i data-lucide="clock-3"></i>
+                  <span>01:23:18</span>
+                </div>
+              </div>
+
+              <div class="latest-content">
+                <div class="latest-top">
+                  <span class="latest-author">
+                    <i data-lucide="disc-3"></i>
+                    Sound District
+                  </span>
+
+                  <span class="latest-number">#124</span>
+                </div>
+
+                <h3>Afro House Experience #124</h3>
+
+                <div class="latest-tags">
+                  <span>Afro House</span>
+                  <span>Melodic</span>
+                </div>
+
+                <div class="latest-footer">
+                  <span>
+                    <i data-lucide="calendar-days"></i>
+                    Jun 2026
+                  </span>
+
+                  <span>
+                    <i data-lucide="headphones"></i>
+                    Mix
+                  </span>
+                </div>
+              </div>
+            </a>
+
+            <!-- CARD 4 -->
+
+            <a
+              href="/podcasts/sound-district-music-show-123/"
+              class="latest-card"
+            >
+              <div class="latest-image">
+                <img
+                  src="assets/images/cover-test.jpg"
+                  alt="Sound District Music Show #123"
+                />
+
+                <div class="latest-overlay">
+                  <button class="latest-play">
+                    <i data-lucide="play"></i>
+                  </button>
+                </div>
+
+                <span class="latest-badge">NEW</span>
+
+                <div class="latest-duration">
+                  <i data-lucide="clock-3"></i>
+                  <span>01:09:42</span>
+                </div>
+              </div>
+
+              <div class="latest-content">
+                <div class="latest-top">
+                  <span class="latest-author">
+                    <i data-lucide="disc-3"></i>
+                    Sound District
+                  </span>
+
+                  <span class="latest-number">#123</span>
+                </div>
+
+                <h3>Late Night House Grooves #123</h3>
+
+                <div class="latest-tags">
+                  <span>Deep House</span>
+                  <span>Organic</span>
+                </div>
+
+                <div class="latest-footer">
+                  <span>
+                    <i data-lucide="calendar-days"></i>
+                    Jun 2026
+                  </span>
+
+                  <span>
+                    <i data-lucide="headphones"></i>
+                    Mix
+                  </span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+      lucide.createIcons();
+    </script>
+
+    <!-- Core -->
+    <script src="/js/core/app.js"></script>
+
+    <!-- Layout -->
+    <script src="/components/layout/navbar.js"></script>
+    <script src="/components/layout/footer.js"></script>
+
+    <!-- Sections -->
+    <script src="/sections/hero/hero.js"></script>
+    <script src="/sections/latest-episode/latest-episode.js"></script>
+    <script src="/sections/featured-podcasts/featured-podcasts.js"></script>
+    <script src="/sections/featured-music/featured-music.js"></script>
+    <script src="/sections/featured-shop/featured-shop.js"></script>
+    <script src="/sections/newsletter/newsletter.js"></script>
+    <script src="/sections/cta/cta.js"></script>
+
+    <!-- Home -->
+    <script src="/js/pages/home.js"></script>
+    <script src="js/core/api.js"></script>
+    <script src="/js/player/player.js"></script>
+    <script src="/js/pages/podcast.service.js"></script>
+  </body>
+</html>

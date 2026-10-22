@@ -1,0 +1,83 @@
+<header class="navbar">
+  <div class="container">
+    <div class="navbar-content">
+      <!-- Logo -->
+      <a href="/" class="navbar-logo">
+        <img src="/assets/images/logo.svg" alt="Sound District" />
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="navbar-nav">
+        <a href="/" class="navbar-link active"> Home </a>
+
+        <a href="/podcasts/" class="navbar-link"> Podcasts </a>
+
+        <a href="/music/" class="navbar-link"> Music </a>
+
+        <a href="/shop/" class="navbar-link"> Shop </a>
+      </nav>
+
+      <!-- Search -->
+      <div class="navbar-search">
+        <button class="navbar-search-icon">
+          <i data-lucide="search"></i>
+        </button>
+
+        <input
+          class="navbar-search-input"
+          type="search"
+          placeholder="Search podcasts, music..."
+        />
+      </div>
+
+      <!-- Desktop Actions -->
+      <div class="navbar-actions">
+        <a href="/login/" class="navbar-login"> Login </a>
+
+        <a href="/register/" class="btn btn-primary"> Create Account </a>
+      </div>
+
+      <!-- Mobile Search -->
+      <button class="navbar-mobile-search" aria-label="Search">
+        <i data-lucide="search"></i>
+      </button>
+
+      <!-- Hamburger -->
+      <button class="navbar-toggle" aria-label="Open Menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Overlay -->
+
+<div class="mobile-overlay"></div>
+
+<!-- Mobile Menu -->
+
+<aside class="mobile-menu">
+  <div class="mobile-menu-header">
+    <img src="/assets/images/logo.svg" alt="Sound District" />
+
+    <button class="mobile-close">
+      <i data-lucide="x"></i>
+    </button>
+  </div>
+
+  <nav class="mobile-nav">
+    <a href="/">Home</a>
+
+    <a href="/podcasts/">Podcasts</a>
+
+    <a href="/music/">Music</a>
+
+    <a href="/shop/">Shop</a>
+  </nav>
+
+  <div class="mobile-actions">
+    <a href="/login/" class="btn btn-secondary btn-block"> Login </a>
+
+    <a href="/register/" class="btn btn-primary btn-block"> Create Account </a>
+  </div>
+</aside>

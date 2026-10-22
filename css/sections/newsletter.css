@@ -1,0 +1,262 @@
+/*==================================================
+  NEWSLETTER
+==================================================*/
+
+.newsletter {
+  padding: var(--section-spacing) 0;
+
+  background: #f8f8f8;
+}
+
+/*==================================================
+  CARD
+==================================================*/
+
+.newsletter-card {
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  padding: 72px 64px;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-2xl);
+
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.06);
+}
+
+.newsletter-card .section-label {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 8px 18px;
+
+  margin-bottom: 20px;
+
+  border-radius: var(--radius-full);
+
+  background: rgba(var(--color-primary-rgb), 0.08);
+
+  color: var(--color-primary);
+
+  font-size: 0.875rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.04em;
+
+  text-transform: uppercase;
+}
+
+.newsletter-card h2 {
+  margin-bottom: 20px;
+}
+
+.newsletter-card p {
+  max-width: 620px;
+
+  margin: 0 auto 40px;
+
+  line-height: 1.8;
+
+  color: var(--color-text);
+}
+
+/*==================================================
+  FORM
+==================================================*/
+
+.newsletter-form {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 16px;
+
+  width: 100%;
+
+  max-width: 700px;
+
+  margin: 0 auto 48px;
+}
+
+.newsletter-form .form-control {
+  flex: 1;
+
+  min-width: 0;
+
+  height: 56px;
+}
+
+.newsletter-form .btn {
+  height: 56px;
+
+  padding-inline: 32px;
+
+  flex-shrink: 0;
+}
+
+/*==================================================
+  BENEFITS
+==================================================*/
+
+.newsletter-benefits {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 48px;
+
+  flex-wrap: wrap;
+}
+
+.newsletter-benefit {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  font-size: 0.95rem;
+
+  font-weight: 600;
+
+  color: var(--color-heading);
+}
+
+.newsletter-benefit svg {
+  width: 20px;
+
+  height: 20px;
+
+  color: var(--color-primary);
+}
+
+/*==================================================
+  HOVER
+==================================================*/
+
+.newsletter-form .btn {
+  transition: transform 0.25s ease;
+}
+
+.newsletter-form .btn:hover {
+  transform: translateY(-2px);
+}
+
+.newsletter-benefit {
+  transition: transform 0.25s ease;
+}
+
+.newsletter-benefit:hover {
+  transform: translateY(-3px);
+}
+
+/*==================================================
+  TABLET
+==================================================*/
+
+@media (max-width: 992px) {
+  .newsletter-card {
+    padding: 56px 40px;
+  }
+
+  .newsletter-benefits {
+    gap: 32px;
+  }
+}
+
+/*==================================================
+  MOBILE
+==================================================*/
+
+@media (max-width: 768px) {
+  .newsletter {
+    padding: 80px 0;
+  }
+
+  .newsletter-card {
+    padding: 40px 24px;
+
+    border-radius: var(--radius-xl);
+  }
+
+  .newsletter-card p {
+    margin-bottom: 32px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    width: 100%;
+
+    max-width: 100%;
+
+    gap: 16px;
+
+    margin-bottom: 40px;
+  }
+
+  .newsletter-form .form-control {
+    width: 100%;
+
+    max-width: 100%;
+
+    min-width: 0;
+  }
+
+  .newsletter-form .btn {
+    width: 100%;
+  }
+
+  .newsletter-benefits {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 20px;
+  }
+
+  .newsletter-benefit {
+    width: 100%;
+
+    justify-content: center;
+  }
+}
+
+/*==================================================
+  SMALL MOBILE
+==================================================*/
+
+@media (max-width: 480px) {
+  .newsletter-card {
+    padding: 32px 20px;
+  }
+
+  .newsletter-card h2 {
+    font-size: 2rem;
+  }
+
+  .newsletter-card p {
+    font-size: 0.95rem;
+  }
+
+  .newsletter-form .form-control,
+  .newsletter-form .btn {
+    height: 52px;
+  }
+}

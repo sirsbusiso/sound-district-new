@@ -1,0 +1,254 @@
+/*==================================================
+  GRID & LAYOUT
+==================================================*/
+
+/*--------------------------------------
+  Container
+--------------------------------------*/
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding-inline: var(--container-padding);
+}
+
+/*--------------------------------------
+  Sections
+--------------------------------------*/
+
+.section {
+  padding-block: var(--space-96);
+}
+
+.section-sm {
+  padding-block: var(--space-64);
+}
+
+.section-lg {
+  padding-block: var(--space-120);
+}
+
+/*--------------------------------------
+  Display
+--------------------------------------*/
+
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+/*--------------------------------------
+  Flex Direction
+--------------------------------------*/
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+/*--------------------------------------
+  Alignment
+--------------------------------------*/
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.items-stretch {
+  align-items: stretch;
+}
+
+/*--------------------------------------
+  Justify
+--------------------------------------*/
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+/*--------------------------------------
+  Wrap
+--------------------------------------*/
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+/*--------------------------------------
+  Flex Grow
+--------------------------------------*/
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-auto {
+  flex: auto;
+}
+
+.flex-none {
+  flex: none;
+}
+
+/*--------------------------------------
+  Grid Columns
+--------------------------------------*/
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+/*--------------------------------------
+  Auto Grid
+--------------------------------------*/
+
+.auto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/*--------------------------------------
+  Common Layouts
+--------------------------------------*/
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.sidebar-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+}
+
+/*--------------------------------------
+  Grid Gap
+--------------------------------------*/
+
+.grid-gap-sm {
+  gap: var(--space-16);
+}
+
+.grid-gap {
+  gap: var(--space-24);
+}
+
+.grid-gap-lg {
+  gap: var(--space-40);
+}
+
+/*--------------------------------------
+  Width
+--------------------------------------*/
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+/*--------------------------------------
+  Responsive
+--------------------------------------*/
+
+@media (max-width: 1200px) {
+  .grid-4,
+  .grid-5 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .grid-3,
+  .grid-4,
+  .grid-5,
+  .two-column,
+  .hero-layout,
+  .sidebar-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding-block: var(--space-64);
+  }
+}

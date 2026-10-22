@@ -1,0 +1,181 @@
+/*==================================================
+  GLOBAL
+==================================================*/
+
+/*--------------------------------------
+  HTML & Body
+--------------------------------------*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+
+  color: var(--color-text);
+
+  background: var(--color-background);
+
+  overflow-x: hidden;
+
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+/*--------------------------------------
+  Main Layout
+--------------------------------------*/
+
+main {
+  min-height: 100vh;
+}
+
+section {
+  position: relative;
+}
+
+article {
+  position: relative;
+}
+
+/*--------------------------------------
+  Media
+--------------------------------------*/
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+picture {
+  display: block;
+}
+
+svg {
+  display: block;
+}
+
+/*--------------------------------------
+  Links
+--------------------------------------*/
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+/*--------------------------------------
+  Buttons
+--------------------------------------*/
+
+button {
+  font: inherit;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition:
+    background var(--transition-normal),
+    color var(--transition-normal),
+    transform var(--transition-fast);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/*--------------------------------------
+  Form Elements
+--------------------------------------*/
+
+input,
+textarea,
+select {
+  width: 100%;
+
+  font: inherit;
+
+  color: inherit;
+
+  background: transparent;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+/*--------------------------------------
+  Selection
+--------------------------------------*/
+
+::selection {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+/*--------------------------------------
+  Focus
+--------------------------------------*/
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+
+  outline-offset: 3px;
+}
+
+/*--------------------------------------
+  Horizontal Rule
+--------------------------------------*/
+
+hr {
+  border: 0;
+
+  border-top: 1px solid var(--color-border);
+}
+
+/*--------------------------------------
+  Iframe
+--------------------------------------*/
+
+iframe {
+  width: 100%;
+  border: none;
+}
+
+/*--------------------------------------
+  Disabled
+--------------------------------------*/
+
+:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/*--------------------------------------
+  Smooth Transitions
+--------------------------------------*/
+
+button,
+a,
+input,
+textarea,
+select,
+img {
+  transition: all var(--transition-normal);
+}

@@ -1,0 +1,81 @@
+<div id="podcastPlayer" class="podcast-player">
+  <audio id="audioPlayer" preload="metadata"></audio>
+
+  <!-- Artwork -->
+  <div class="player-artwork">
+    <img
+      id="playerArtwork"
+      src="assets/images/cover-test.jpg"
+      alt="Podcast Artwork"
+    />
+  </div>
+
+  <!-- Episode Info -->
+  <div class="player-info">
+    <span class="player-now-playing"> NOW PLAYING </span>
+
+    <h4 id="playerEpisodeTitle">Sound District Show #40</h4>
+
+    <p id="playerEpisodeMeta">360 Project</p>
+  </div>
+
+  <!-- Controls -->
+  <div class="player-controls">
+    <button
+      id="previousButton"
+      class="player-button"
+      aria-label="Previous Episode"
+    >
+      <i data-lucide="skip-back"></i>
+    </button>
+
+    <button
+      id="playPauseButton"
+      class="player-button player-button-large"
+      aria-label="Play"
+    >
+      <i id="playPauseIcon" data-lucide="play"> </i>
+    </button>
+
+    <button id="nextButton" class="player-button" aria-label="Next Episode">
+      <i data-lucide="skip-forward"></i>
+    </button>
+  </div>
+
+  <!-- Progress -->
+  <div class="player-progress">
+    <span id="currentTime"> 00:00 </span>
+    <input
+      id="progressBar"
+      class="progress-bar"
+      type="range"
+      min="0"
+      max="0"
+      value="0"
+      step="1"
+    />
+
+    <span id="duration"> 00:00 </span>
+  </div>
+
+  <!-- Right -->
+  <div class="player-right">
+    <button
+      id="downloadButton"
+      class="player-icon-button"
+      aria-label="Download"
+    >
+      <i data-lucide="download"></i>
+    </button>
+
+    <button id="shareButton" class="player-icon-button" aria-label="Share">
+      <i data-lucide="share-2"></i>
+    </button>
+
+    <button id="muteButton" class="player-icon-button" aria-label="Mute">
+      <i data-lucide="volume-2"></i>
+    </button>
+
+    <input id="volumeSlider" type="range" min="0" max="100" value="100" />
+  </div>
+</div>

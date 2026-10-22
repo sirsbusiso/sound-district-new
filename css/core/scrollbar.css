@@ -1,0 +1,66 @@
+/*==================================================
+  SCROLLBAR
+==================================================*/
+
+/*--------------------------------------
+  Global Scrollbar
+--------------------------------------*/
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-background);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--color-background);
+}
+
+/*--------------------------------------
+  Thin Scrollbar
+--------------------------------------*/
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+  border-radius: var(--radius-full);
+}
+
+/*--------------------------------------
+  Hidden Scrollbar
+--------------------------------------*/
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/*--------------------------------------
+  Firefox
+--------------------------------------*/
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-secondary) var(--color-background);
+}

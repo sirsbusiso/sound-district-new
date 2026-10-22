@@ -1,0 +1,287 @@
+/*==================================================
+  UTILITIES
+==================================================*/
+
+/*--------------------------------------
+  Display
+--------------------------------------*/
+
+.hidden {
+  display: none !important;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+/*--------------------------------------
+  Position
+--------------------------------------*/
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.sticky {
+  position: sticky;
+}
+
+/*--------------------------------------
+  Overflow
+--------------------------------------*/
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+/*--------------------------------------
+  Width
+--------------------------------------*/
+
+.w-auto {
+  width: auto;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-fit {
+  width: fit-content;
+}
+
+/*--------------------------------------
+  Height
+--------------------------------------*/
+
+.h-auto {
+  height: auto;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-screen {
+  min-height: 100vh;
+}
+
+/*--------------------------------------
+  Border Radius
+--------------------------------------*/
+
+.rounded-xs {
+  border-radius: var(--radius-xs);
+}
+
+.rounded-sm {
+  border-radius: var(--radius-sm);
+}
+
+.rounded {
+  border-radius: var(--radius-md);
+}
+
+.rounded-lg {
+  border-radius: var(--radius-lg);
+}
+
+.rounded-xl {
+  border-radius: var(--radius-xl);
+}
+
+.rounded-2xl {
+  border-radius: var(--radius-2xl);
+}
+
+.rounded-full {
+  border-radius: var(--radius-full);
+}
+
+/*--------------------------------------
+  Shadows
+--------------------------------------*/
+
+.shadow-xs {
+  box-shadow: var(--shadow-xs);
+}
+
+.shadow-sm {
+  box-shadow: var(--shadow-sm);
+}
+
+.shadow {
+  box-shadow: var(--shadow-md);
+}
+
+.shadow-lg {
+  box-shadow: var(--shadow-lg);
+}
+
+.shadow-xl {
+  box-shadow: var(--shadow-xl);
+}
+
+/*--------------------------------------
+  Borders
+--------------------------------------*/
+
+.border {
+  border: 1px solid var(--color-border);
+}
+
+.border-top {
+  border-top: 1px solid var(--color-border);
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.border-left {
+  border-left: 1px solid var(--color-border);
+}
+
+.border-right {
+  border-right: 1px solid var(--color-border);
+}
+
+/*--------------------------------------
+  Backgrounds
+--------------------------------------*/
+
+.bg-white {
+  background: var(--color-white);
+}
+
+.bg-card {
+  background: var(--color-card);
+}
+
+.bg-surface {
+  background: var(--color-surface);
+}
+
+.bg-primary {
+  background: var(--color-primary);
+}
+
+.bg-transparent {
+  background: transparent;
+}
+
+/*--------------------------------------
+  Object Fit
+--------------------------------------*/
+
+.object-cover {
+  object-fit: cover;
+}
+
+.object-contain {
+  object-fit: contain;
+}
+
+/*--------------------------------------
+  Cursor
+--------------------------------------*/
+
+.pointer {
+  cursor: pointer;
+}
+
+.not-allowed {
+  cursor: not-allowed;
+}
+
+.grab {
+  cursor: grab;
+}
+
+/*--------------------------------------
+  Opacity
+--------------------------------------*/
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.opacity-75 {
+  opacity: 0.75;
+}
+
+.opacity-100 {
+  opacity: 1;
+}
+
+/*--------------------------------------
+  User Select
+--------------------------------------*/
+
+.select-none {
+  user-select: none;
+}
+
+/*--------------------------------------
+  Transition
+--------------------------------------*/
+
+.transition {
+  transition: var(--transition-normal);
+}
+
+.transition-fast {
+  transition: var(--transition-fast);
+}
+
+.transition-slow {
+  transition: var(--transition-slow);
+}
+
+/*--------------------------------------
+  Visibility
+--------------------------------------*/
+
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
